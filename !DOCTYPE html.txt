@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TODO List</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>TODO List</h1>
+      <form method="post" action="add.php">
+        <input type="text" name="task" placeholder="Add a new task...">
+        <button type="submit">Add</button>
+      </form>
+      <ul id="task-list">
+        <!-- Tasks will be added here dynamically -->
+      </ul>
+      <button id="clear-completed">Clear completed tasks</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
