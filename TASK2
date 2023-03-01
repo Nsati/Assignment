@@ -1,0 +1,22 @@
+def num_connected_components(head, nums):
+    # Create a hash set of values in nums
+    num_set = set(nums)
+    
+    # Initialize a counter for number of connected components
+    num_components = 0
+    
+    # Traverse the linked list
+    curr = head
+    while curr:
+        # Check if the current node's value is in nums
+        if curr.val in num_set:
+            # Check if the next node's value is also in nums
+            if curr.next and curr.next.val in num_set:
+                curr = curr.next
+            else:
+                # We have found the end of a connected component
+                num_components += 1
+        # Move on to the next node
+        curr = curr.next
+    
+    return num_components
